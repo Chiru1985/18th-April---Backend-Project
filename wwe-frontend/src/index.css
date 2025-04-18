@@ -1,0 +1,61 @@
+body {
+  background-color: #0d1117;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #161b22;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+form {
+  background-color: #21262d;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+input, button {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button.edit {
+  background-color: gold;
+  color: black;
+  margin-right: 0.5rem;
+}
+
+button.delete {
+  background-color: crimson;
+  color: white;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 10px;
+}
