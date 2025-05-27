@@ -54,7 +54,7 @@ const WrestlerForm = ({ onSubmit, selected, clearSelection, error }) => {
     >
       <h2 style={{ marginBottom: '1rem' }}>{selected ? 'Edit Wrestler' : 'Add Wrestler'}</h2>
 
-      {/* ✅ Error message */}
+      
       {error && (
         <div
           style={{
@@ -69,13 +69,14 @@ const WrestlerForm = ({ onSubmit, selected, clearSelection, error }) => {
         </div>
       )}
 
-      {/* Form fields */}
+     
       {['name', 'height', 'weight', 'signatureMove'].map((field) => (
         <div key={field} style={{ marginBottom: '1rem' }}>
-          <label style={{ display: 'block', marginBottom: '0.25rem' }}>
+          <label htmlFor={field} style={{ display: 'block', marginBottom: '0.25rem' }}>
             {field.charAt(0).toUpperCase() + field.slice(1)}
           </label>
           <input
+            id={field}
             type="text"
             name={field}
             value={formData[field]}
@@ -94,10 +95,12 @@ const WrestlerForm = ({ onSubmit, selected, clearSelection, error }) => {
         </div>
       ))}
 
-      {/* Brand Dropdown */}
       <div style={{ marginBottom: '1rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.25rem' }}>Brand</label>
+        <label htmlFor="brand" style={{ display: 'block', marginBottom: '0.25rem' }}>
+          Brand
+        </label>
         <select
+          id="brand"
           name="brand"
           value={formData.brand}
           onChange={handleChange}
@@ -118,7 +121,7 @@ const WrestlerForm = ({ onSubmit, selected, clearSelection, error }) => {
         </select>
       </div>
 
-      {/* Buttons */}
+    
       <div style={{ textAlign: 'right', marginTop: '1rem' }}>
         {selected && (
           <button
